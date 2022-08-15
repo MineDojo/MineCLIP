@@ -19,3 +19,7 @@ def main(cfg):
     model = MineCLIP(**cfg).to(device)
     model.load_ckpt(ckpt.path, strict=True)
     print("Successfully loaded ckpt")
+
+
+if __name__ == "__main__":
+    main()
