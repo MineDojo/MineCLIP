@@ -8,6 +8,7 @@ from mineclip import MineCLIP
 @hydra.main(config_name="conf", config_path=".", version_base="1.1")
 def main(cfg):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    cfg.pop("ckpt")
 
     model = MineCLIP(**cfg).to(device)
 

@@ -44,7 +44,16 @@ We provide implementation for two MineCLIP variants, `mineclip_attn` and `minecl
 python3 main/mineclip/run.py variant=attn|avg
 ```
 
-Choose one variant from `attn` and `avg`. If everything goes well, you should see `Inference successful` printed out. The pretrained weight release is TBD, please stay tuned!
+Choose one variant from `attn` and `avg`. If everything goes well, you should see `Inference successful` printed out.
+
+Pretrained weights for `attn` and `avg` can be found [here](https://drive.google.com/file/d/1uaZM1ZLBz2dZWcn85rZmjP7LV6Sg5PZW/view?usp=sharing) and [here](https://drive.google.com/file/d/1mFe09JsVS5FpZ82yuV7fYNFYnkz9jDqr/view?usp=sharing). You can run demos below to load pretrained weights.
+
+```bash
+python3 main/mineclip/load_ckpt.py variant=attn|avg ckpt.path=PATH/TO/DOWNLOADED/CKPT
+```
+
+Choose one variant from `attn` and `avg` and specify path for downloaded weights. If everything goes well, you should see `Successfully loaded ckpt` printed out.
+
 
 # MineAgent
 
