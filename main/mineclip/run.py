@@ -1,5 +1,6 @@
 import torch
 import hydra
+from omegaconf import OmegaConf
 
 from mineclip import MineCLIP
 
@@ -8,6 +9,9 @@ from mineclip import MineCLIP
 @hydra.main(config_name="conf", config_path=".", version_base="1.1")
 def main(cfg):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    OmegaConf.set_struct(cfg, False)
+    cfg.pop("ckpt")
+    OmegaConf.set_struct(cfg, True)
 
     model = MineCLIP(**cfg).to(device)
 
