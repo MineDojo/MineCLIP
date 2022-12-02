@@ -68,7 +68,7 @@ If everything goes well, you should see `Inference successful` printed out.
 To run a MineAgent demo with an environment in the loop, execute
 
 ```bash
-python3 main/mineagent/run_env_in_the_loop.py
+python3 main/mineagent/run_env_in_loop.py
 ```
 
 If everything goes well, you should see a Minecraft client pops up and an agent fight against a spider (though currently it is a random policy).
