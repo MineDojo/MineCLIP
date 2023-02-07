@@ -25,6 +25,9 @@ feature_net_kwargs:
   prompt:
     cls: PromptEmbFeat
     output_dim: 512
+  rgb:
+    cls: DummyImgFeat
+    output_dim: 512
 
 feature_fusion:
   output_dim: 512

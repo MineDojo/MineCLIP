@@ -50,6 +50,7 @@ def main(cfg):
             low=0, high=88, size=(B,), dtype=torch.long, device=device
         ),
         "prompt": torch.rand((B, 512), device=device),
+        "rgb": torch.rand((B, 512), device=device),
     }
     pi_out = mine_agent(Batch(obs=obs))
     print(pi_out.act)
