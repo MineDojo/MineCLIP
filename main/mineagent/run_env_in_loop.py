@@ -34,6 +34,7 @@ def preprocess_obs(env_obs):
             low=0, high=88, size=(B,), dtype=torch.long, device=device
         ),
         "prompt": torch.rand((B, 512), device=device),
+        "rgb": torch.rand((B, 512), device=device),
     }
     return Batch(obs=obs)
 
