@@ -79,6 +79,10 @@ We provide env wrappers for dense reward shaping used in our paper. Specifically
 
 You can also find two sample env implementations `HuntCowDenseRewardEnv` and `CombatSpiderDenseRewardEnv`. They correspond to tasks "Hunt Cow" and "Combat Spider" in the paper.
 
+# Training Data
+
+We provide [a superset of 640K video clips](https://drive.google.com/file/d/1cLXC64Cu2EJj2nsb4K0ajl8qqX6l0lKd/view?usp=sharing) we used for pre-training. You can subsample from this set and grow start/end timestamps as you like (basically what we did for training MineCLIP).
+
 # Paper and Citation
 
 Our paper is posted on [Arxiv](https://arxiv.org/abs/2206.08853). If you find our work useful, please consider citing us! 
