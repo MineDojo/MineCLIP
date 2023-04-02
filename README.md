@@ -83,6 +83,22 @@ You can also find two sample env implementations `HuntCowDenseRewardEnv` and `Co
 
 We provide [a superset of 640K video clips](https://drive.google.com/file/d/1cLXC64Cu2EJj2nsb4K0ajl8qqX6l0lKd/view?usp=sharing) we used for pre-training. You can subsample from this set and grow start/end timestamps as you like (basically what we did for training MineCLIP).
 
+Format:
+```python
+{
+    "keyword1": list[
+        [video_id1, start_timestamp1, end_timestamp1],
+        [video_id2, start_timestamp2, end_timestamp2],
+        [video_id3, start_timestamp3, end_timestamp3],
+    ],
+    "keyword2": list[
+        [video_id4, start_timestamp4, end_timestamp4],
+        ...
+    ],
+    ...
+}
+```
+
 # Paper and Citation
 
 Our paper is posted on [Arxiv](https://arxiv.org/abs/2206.08853). If you find our work useful, please consider citing us! 
